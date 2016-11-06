@@ -1,0 +1,225 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'OpenSansRegular',sans-serif;
+  color: #445264; }
+
+a {
+  color: inherit;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  a:hover {
+    color: #fc9783; }
+
+h2 {
+  padding: 0;
+  margin: 0;
+  cursor: default; }
+
+h3, p, span {
+  cursor: default; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+main {
+  margin: 4% 0 4% 0; }
+
+aside {
+  float: left;
+  margin-top: 10%; }
+
+.category {
+  cursor: pointer; }
+  .category-item {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
+    .category-item:hover {
+      color: #fc9783; }
+  .category-subcategory {
+    margin-left: 15px;
+    display: none; }
+
+.product .marg {
+  margin-right: 60px;
+  margin-left: 10px;
+  position: relative; }
+
+.product-item {
+  float: right;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  padding: 15px 10px;
+  text-align: center; }
+  .product-item:hover {
+    -webkit-box-shadow: inset 0px 0px 0px 1px #d1d1d1;
+            box-shadow: inset 0px 0px 0px 1px #d1d1d1; }
+  .product-item-discription {
+    position: relative; }
+    .product-item-discription-h3 {
+      font-weight: lighter;
+      font-size: 1.125em;
+      margin: 0 0 5px 15px;
+      text-align: left; }
+    .product-item-discription-p {
+      text-align: left;
+      margin: 0 0 0 15px;
+      padding: 0;
+      color: #959595; }
+    .product-item-discription-price {
+      display: block; }
+      .product-item-discription-price-item {
+        position: relative;
+        margin-bottom: 10px;
+        list-style: none; }
+    .product-item-discription .price {
+      font-weight: bolder;
+      font-size: 1.125em; }
+    .product-item-discription .weight {
+      margin-left: 25%; }
+    .product-item-discription .sub-price {
+      margin-top: 10px;
+      position: absolute;
+      display: none;
+      left: -10px;
+      right: -10px;
+      background: #d3e6f9;
+      z-index: 1;
+      list-style: none;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      -webkit-box-shadow: 0px 3px 6px -2px rgba(0, 0, 0, 0.75);
+              box-shadow: 0px 3px 6px -2px rgba(0, 0, 0, 0.75); }
+      .product-item-discription .sub-price::before {
+        content: '';
+        position: absolute;
+        top: -19%;
+        left: 31%;
+        border: 15px solid transparent;
+        border-bottom: 10px solid #d3e6f9;
+        z-index: -1; }
+      .product-item-discription .sub-price .sub-item {
+        padding: 5px 10px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .product-item-discription .sub-price .sub-item:first-child {
+          display: none; }
+        .product-item-discription .sub-price .sub-item:hover {
+          background: #4b98e8; }
+    .product-item-discription .button-discr {
+      position: relative;
+      background: #fff;
+      border: 1px solid #9e9e9e;
+      margin-top: 10px;
+      padding: 10px 13px;
+      color: #959595;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .product-item-discription .button-discr:hover {
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        -webkit-box-shadow: 2px 2px 25px -1px rgba(0, 0, 0, 0.5);
+                box-shadow: 2px 2px 25px -1px rgba(0, 0, 0, 0.5);
+        z-index: 2; }
+    .product-item-discription .buy {
+      color: #fff;
+      background: #9e9e9e;
+      border-left: 3px solid #4b98e8; }
+
+.basket {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  background-size: cover;
+  padding: 20px; }
+  .basket-item .price-num {
+    position: absolute;
+    right: 28%;
+    top: 28%; }
+  .basket-total {
+    position: absolute;
+    right: 20px;
+    bottom: 15%; }
+  .basket .fa {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 1.875em;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .basket .fa:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+              filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); }
+  .basket .iter-price {
+    position: absolute;
+    right: 4%;
+    bottom: 55%; }
+    .basket .iter-price-num {
+      font-size: 1.5625em; }
+    .basket .iter-price-count {
+      margin-right: 30px; }
+    .basket .iter-price button {
+      font-size: 1.125em; }
+      .basket .iter-price button:first-child {
+        margin-left: 100px; }
+  .basket-buttons {
+    float: right;
+    margin-top: 30px;
+    color: #fff; }
+    .basket-buttons .popup-button {
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      background: #a2a8b1; }
+      .basket-buttons .popup-button:last-child {
+        background-color: #fc9783; }
+  .basket .product-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 2px solid #445264;
+    border-bottom: 2px solid #445264; }
+    .basket .product-item:hover {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+    .basket .product-item img {
+      margin-right: 20px; }
+    .basket .product-item-discription-h3 {
+      margin-bottom: 15%; }
+    .basket .product-item-discription-p {
+      display: none; }
+    .basket .product-item-discription-price-item {
+      position: relative;
+      margin-bottom: 10px;
+      list-style: none; }
+    .basket .product-item-discription .price {
+      position: absolute;
+      right: 0; }
+    .basket .product-item-discription .weight {
+      display: none; }
+    .basket .product-item-discription .button-discr {
+      display: none; }
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  z-index: 10;
+  display: none;
+  opacity: .5; }
