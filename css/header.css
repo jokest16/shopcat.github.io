@@ -41,7 +41,7 @@ aside {
   .category-item {
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
-    margin-bottom: 5%; }
+    margin-bottom: 7%; }
     .category-item:hover {
       color: #fc9783; }
   .category-subcategory {
