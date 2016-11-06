@@ -14,17 +14,19 @@ $(function(){
       closeBasket = $('.fa-times'),//кнопка закрыть на popup окне корзины
       modalBg = $('.modal-bg'),//блок фона
       retButton = $('.return-b');//кнопка вернуться в каталог
-
+      arrowDown = $('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
   catItem.on('click',function(){//кдик по списку категорий
     $(this).find(sub).slideToggle('slow');//по клику на категорию он ищет дочерний элемент если есть то открывает по повторному прячет
   });
   prodSub.on('click',function(){//клик по цене
     $(this).next().slideToggle('normal');//ищет следующий блок и вешает на него мереключатель вверх/низ
     subIt.next().on('click', function () {//клик по пункту всплывающего списка
+      $(this).append(arrowDown);
       $(this).parent().prev().html($(this).clone());// намудрил тут немного но больше в голову нечего не пришло поэтому нашел радителя и от него взял сл. элемент в который вставли клон нажатого пункта списка
       $(this).parent().slideUp();// по нажатию на родителя либо на пункт списка список сварачивается
     });
   });
+  prodSub.append(arrowDown)
     $('.product-item-discription-h3').equalHeights();// дабы ширина не блока товара не ехала от количества слов
     $('.product-item-discription-p').equalHeights();// дабы ширина не блока товара не ехала от количества слов
     buyB.on('click',function(e){//клик по кнопке корзина

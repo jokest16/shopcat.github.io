@@ -4720,7 +4720,7 @@ body textarea:required:valid {
 @media only screen and (max-width: 992px) {
   aside {
     font-size: 1em;
-    left: 10%; }
+    left: 5%; }
   .basket .iter-price-count {
     margin-right: 0px; }
   .basket .product-item-discription-h3 {
@@ -4732,7 +4732,7 @@ body textarea:required:valid {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   aside {
-    left: 40px;
+    left: 5%;
     font-size: 0.8125em; }
   .basket .product-item-discription-h3 {
     font-size: 0.75em;

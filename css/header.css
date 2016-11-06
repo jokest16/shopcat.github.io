@@ -47,6 +47,9 @@ aside {
   .category-subcategory {
     margin-left: 15px;
     display: none; }
+    .category-subcategory-item {
+      margin-top: 5px;
+      margin-bottom: 5px; }
 
 .product .marg {
   margin-right: 60px;
@@ -81,6 +84,8 @@ aside {
         position: relative;
         margin-bottom: 10px;
         list-style: none; }
+        .product-item-discription-price-item .fa {
+          margin-left: 5px; }
     .product-item-discription .price {
       font-weight: bolder;
       font-size: 1.125em; }
@@ -111,6 +116,8 @@ aside {
         padding: 5px 10px;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
+        .product-item-discription .sub-price .sub-item .fa {
+          display: none; }
         .product-item-discription .sub-price .sub-item:first-child {
           display: none; }
         .product-item-discription .sub-price .sub-item:hover {
