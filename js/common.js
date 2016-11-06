@@ -2,6 +2,7 @@ $(function(){
   var sub = $('.category-subcategory'),// список с категорией щенки/взрослые/пожилые
       catItem = $('.category-item'),//пунк меню бокового списка
       prodSub = $('.product-item-discription-price-item'),//блок принимающий цену с выпадающего списка по дефолту 100 000
+      prodItem = $('.product-item'),
       subPr = $('.sub-price'),// выпадающий список с ценой
       subIt = $('.sub-item'),// пункт меню выпадающего списока с ценой
       buyB = $('.buy'),//кнопка "в корзину"
@@ -11,7 +12,8 @@ $(function(){
       totalPriceIter = $('.iter-price-num'),//щетчик количества заказываемого товара
       plus = $('.plus'),minus = $('.minus'),//кнопки щетчика
       closeBasket = $('.fa-times'),//кнопка закрыть на popup окне корзины
-      modalBg = $('.modal-bg');//блок фона
+      modalBg = $('.modal-bg'),//блок фона
+      retButton = $('.return-b');//кнопка вернуться в каталог
 
   catItem.on('click',function(){//кдик по списку категорий
     $(this).find(sub).slideToggle('slow');//по клику на категорию он ищет дочерний элемент если есть то открывает по повторному прячет
@@ -23,7 +25,8 @@ $(function(){
       $(this).parent().slideUp();// по нажатию на родителя либо на пункт списка список сварачивается
     });
   });
-
+    $('.product-item-discription-h3').equalHeights();// дабы ширина не блока товара не ехала от количества слов
+    $('.product-item-discription-p').equalHeights();// дабы ширина не блока товара не ехала от количества слов
     buyB.on('click',function(e){//клик по кнопке корзина
 
     basket.fadeIn('normal');//показывает блок корзины
@@ -43,12 +46,12 @@ $(function(){
          totalPriceIter.html('0');
          totalPrice.html('0');
       }
-      totalPrice.html(((+totalPriceIter.html())/getNum(price)+(+totalPriceIter.html()*getNum(price))).toFixed());//также нужно отнимать значение иьоговой цены в обратку
+      totalPrice.html(((+totalPriceIter.html())/getNum(price)+(+totalPriceIter.html()*getNum(price))).toFixed());//также нужно отнимать значение иьоговой цены в обратку и фиксит нули
     });
-    function getNum(str) {
-      str = str.split(' ');
-      str = str.join('');
-      return parseFloat(str);
+    function getNum(str) {//функция принимает строку
+      str = str.split(' ');//строка делится по пробелам на массив
+      str = str.join('');// потом этот массив соединяется без пробелов в строку
+      return parseFloat(str);// потом из этой строки вынимается числа
     }
 
   });
@@ -57,4 +60,9 @@ $(function(){
     modalBg.fadeOut(600);
     basket.find('.product-item').remove();
   });
+    retButton.on('click', function () {
+      basket.fadeOut();
+      modalBg.fadeOut(600);
+      basket.find('.product-item').remove();
+    });
 });

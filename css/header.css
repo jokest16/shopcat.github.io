@@ -29,13 +29,19 @@ main {
 
 aside {
   float: left;
-  margin-top: 10%; }
+  margin-top: 10%;
+  max-width: 200px; }
+
+.category-h2 {
+  margin-bottom: 2%; }
 
 .category {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 0.9375em; }
   .category-item {
     -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease; }
+    transition: color 0.3s ease;
+    margin-bottom: 5%; }
     .category-item:hover {
       color: #fc9783; }
   .category-subcategory {
@@ -61,8 +67,9 @@ aside {
     .product-item-discription-h3 {
       font-weight: lighter;
       font-size: 1.125em;
-      margin: 0 0 5px 15px;
-      text-align: left; }
+      margin: 0 0 1% 10%;
+      text-align: left;
+      min-height: 20%; }
     .product-item-discription-p {
       text-align: left;
       margin: 0 0 0 15px;
