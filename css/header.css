@@ -221,10 +221,13 @@ aside {
       list-style: none; }
     .basket .product-item-discription .price {
       position: absolute;
-      right: 0; }
+      right: 0;
+      bottom: 10px; }
     .basket .product-item-discription .weight {
       display: none; }
     .basket .product-item-discription .button-discr {
+      display: none; }
+    .basket .product-item-discription .fa-chevron-down {
       display: none; }
 
 .modal-bg {

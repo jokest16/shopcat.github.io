@@ -15,6 +15,7 @@ $(function(){
       modalBg = $('.modal-bg'),//блок фона
       retButton = $('.return-b');//кнопка вернуться в каталог
       arrowDown = $('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
+
   catItem.on('click',function(){//кдик по списку категорий
     $(this).find(sub).slideToggle('slow');//по клику на категорию он ищет дочерний элемент если есть то открывает по повторному прячет
   });
@@ -26,11 +27,12 @@ $(function(){
       $(this).parent().slideUp();// по нажатию на родителя либо на пункт списка список сварачивается
     });
   });
-  prodSub.append(arrowDown)
+
+  prodSub.append(arrowDown);
     $('.product-item-discription-h3').equalHeights();// дабы ширина не блока товара не ехала от количества слов
     $('.product-item-discription-p').equalHeights();// дабы ширина не блока товара не ехала от количества слов
-    buyB.on('click',function(e){//клик по кнопке корзина
 
+    buyB.on('click',function(e){//клик по кнопке корзина
     basket.fadeIn('normal');//показывает блок корзины
     modalBg.show();// показывает фон
     basketItem.append($(this).parent().parent().clone());//вствляем родителя родителя нажтой кнопки
@@ -40,7 +42,6 @@ $(function(){
     plus.on('click', function(e){//клик на кнопку плюс
       totalPriceIter.html(+totalPriceIter.html()+1);//заменяем содержимое спана на приведенное значение к числу и прибавляем еденицу
       totalPrice.html((+totalPriceIter.html())*getNum(price));// далее полученое ниже значение умножаем на приведённое значение блока с ценой за штуку и множаем на счётчик и всё это запихиваем в блок итоговой цены
-      console.log(e);
     });
     minus.on('click', function(){// клик по минусу
       totalPriceIter.html(+totalPriceIter.html()-1);// по клику отнимаем еденицу от текущего значения счетчика
@@ -57,12 +58,12 @@ $(function(){
     }
 
   });
-  closeBasket.on('click', function () {
-    basket.fadeOut();
-    modalBg.fadeOut(600);
-    basket.find('.product-item').remove();
+  closeBasket.on('click', function () {//клик по крестику
+    basket.fadeOut();// прячет корзину
+    modalBg.fadeOut(600);// прячет фон
+    basket.find('.product-item').remove();// чистка корзины от клона блока
   });
-    retButton.on('click', function () {
+    retButton.on('click', function () {//тоже самое что и выше
       basket.fadeOut();
       modalBg.fadeOut(600);
       basket.find('.product-item').remove();
