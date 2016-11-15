@@ -42,6 +42,12 @@ $(function(){
     plus.on('click', function(e){//клик на кнопку плюс
       totalPriceIter.html(+totalPriceIter.html()+1);//заменяем содержимое спана на приведенное значение к числу и прибавляем еденицу
       totalPrice.html((+totalPriceIter.html())*getNum(price));// далее полученое ниже значение умножаем на приведённое значение блока с ценой за штуку и множаем на счётчик и всё это запихиваем в блок итоговой цены
+      totalPrice.priceFormat({
+        prefix: '',
+        centsSeparator: ' ',
+        thousandsSeparator: ' ',
+        centsLimit: 3
+      });
     });
     minus.on('click', function(){// клик по минусу
       totalPriceIter.html(+totalPriceIter.html()-1);// по клику отнимаем еденицу от текущего значения счетчика
@@ -49,23 +55,34 @@ $(function(){
          totalPriceIter.html('0');
          totalPrice.html('0');
       }
-      totalPrice.html(((+totalPriceIter.html())/getNum(price)+(+totalPriceIter.html()*getNum(price))).toFixed());//также нужно отнимать значение иьоговой цены в обратку и фиксит нули
+      totalPrice.html(((+totalPriceIter.html())/getNum(price)+(+totalPriceIter.html()*getNum(price))).toFixed())//также нужно отнимать значение иьоговой цены в обратку и фиксит нули
+      totalPrice.priceFormat({
+        prefix: '',
+        centsSeparator: ' ',
+        thousandsSeparator: ' ',
+        centsLimit: 3
+      });
     });
+
     function getNum(str) {//функция принимает строку
       str = str.split(' ');//строка делится по пробелам на массив
       str = str.join('');// потом этот массив соединяется без пробелов в строку
       return parseFloat(str);// потом из этой строки вынимается числа
     }
-
   });
   closeBasket.on('click', function () {//клик по крестику
-    basket.fadeOut();// прячет корзину
+    basket.fadeOut(200);// прячет корзину
     modalBg.fadeOut(600);// прячет фон
     basket.find('.product-item').remove();// чистка корзины от клона блока
   });
     retButton.on('click', function () {//тоже самое что и выше
-      basket.fadeOut();
+      basket.fadeOut(200);
       modalBg.fadeOut(600);
       basket.find('.product-item').remove();
     });
+  modalBg.on('click', function () {//клик по крестику
+    basket.fadeOut(200);// прячет корзину
+    modalBg.fadeOut(600);// прячет фон
+    basket.find('.product-item').remove();// чистка корзины от клона блока
+  });
 });

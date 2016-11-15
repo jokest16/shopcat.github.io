@@ -72,13 +72,16 @@ aside
 					position: relative
 					margin-bottom: 10px
 					list-style: none
+					cursor: pointer
 					.fa
 						margin-left: 5px
 			.price
 				font-weight: bolder
 				font-size: em(18px)
+				cursor: pointer
 			.weight
 				margin-left: 25%
+				cursor: pointer
 			.sub-price
 				margin-top: 10px
 				position: absolute
@@ -203,6 +206,19 @@ aside
 					display: none
 				.fa-chevron-down
 					display: none
+.discription
+	position: fixed
+	display: none
+	z-index: 99
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background: #fff
+	background-size: cover
+	padding: 20px
+	&-form
+		border-top: 2px solid #445264
+		border-bottom: 2px solid #445264
 .modal-bg
 	position: fixed
 	top: 0

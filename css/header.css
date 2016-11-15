@@ -83,14 +83,17 @@ aside {
       .product-item-discription-price-item {
         position: relative;
         margin-bottom: 10px;
-        list-style: none; }
+        list-style: none;
+        cursor: pointer; }
         .product-item-discription-price-item .fa {
           margin-left: 5px; }
     .product-item-discription .price {
       font-weight: bolder;
-      font-size: 1.125em; }
+      font-size: 1.125em;
+      cursor: pointer; }
     .product-item-discription .weight {
-      margin-left: 25%; }
+      margin-left: 25%;
+      cursor: pointer; }
     .product-item-discription .sub-price {
       margin-top: 10px;
       position: absolute;
@@ -229,6 +232,22 @@ aside {
       display: none; }
     .basket .product-item-discription .fa-chevron-down {
       display: none; }
+
+.discription {
+  position: fixed;
+  display: none;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  background-size: cover;
+  padding: 20px; }
+  .discription-form {
+    border-top: 2px solid #445264;
+    border-bottom: 2px solid #445264; }
 
 .modal-bg {
   position: fixed;
