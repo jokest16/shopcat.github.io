@@ -1,174 +1,32 @@
-/*@import ""сюда нужно всталть путь если конечный файл css не указываем расширения
 @import "bourbon"
-@import "vars"
+@import "var.sass"
 
-.about
-  position: relative
-  z-index: 1
-  background: #fff url(../img/about/left.jpg) no-repeat 0% 0%
-  background-size: 950px
-  .right
-    padding: 110px 40px
-    background: #fff
-    p
-      font-size: em(36px)
-.gallery
-  position: relative
-  background: $gallery
-  &-contanier
-    display: flex
-    flex-flow: row
-    justify-content: center
-  &-bottom
-    color: #fff
-    &-text
-      padding: 10% 0px
-      &-button
-        border: 2px solid #fff
-        border-radius: 25px
-        padding: 10px 25px
-        text-transform: uppercase
-        font-family: 'FiraSansBold',sans-serif
-        font-size: em(24px)
-        display: inline-block
-        transition: all .5s ease
-        &:hover
-          transform: scale(1.1)
-          box-shadow: 0px 3px 44px 0px rgba(0,0,0,0.75)
-      p
-        font-size: em(36px)
-    .gallery-contanier-item
-      margin-left: -16px
-.music
-  &-firstSect
-    background: url(../img/music/bg.jpg) no-repeat 100% 0
-    background-size: cover
-    padding: 0px 0px 500px 0px
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 69.7%
-      bottom: 0
-      background: $firsSCol
-    &-text
-      background: #212227
-      margin-right: -14px
-      padding: 70px 40px
-      h3
-        color: $firsSColText
-        span
-          font-family: 'FiraSansExtraLight',sans-serif
-        h3
-          font-size: em(24px)
-          font-family: 'FiraSansBold',sans-serif
-          font-weight: lighter
-          text-transform: uppercase
-      p
-        font-family: 'FiraSansRegular', sans-serif
-        font-size: 1em
-        color: #fff
-      &-button
-        border: 2px solid $firsSColText
-        border-radius: 25px
-        color: $firsSColText
-        display: inline-block
-        padding: 10px 20px
-        margin-top: 20px
-        text-transform: uppercase
-        font-weight: bold
-        transition: all .5s ease
-        &:hover
-          color: $firsSColText
-          transform: scale(1.1)
-        .fa
-          margin-left: 10px
-  &-secondSect
-    color: #fff
-    background: #282b2f 100% 0
-    p
-      font-size: em(36px)
-    &-button
-      border: 2px solid #fff
-      border-radius: 25px
-      padding: 10px 25px
-      text-transform: uppercase
-      font-family: 'FiraSansBold',sans-serif
-      font-size: em(24px)
-      display: inline-block
-      transition: all .5s ease
-      &:hover
-        transform: scale(1.1)
-        box-shadow: 0px 3px 44px 0px rgba(0,0,0,0.75)
-    &-left
-      padding: 80px 40px
-      position: relative
-      z-index: 1
-      &::before
-        content: ''
-        position: absolute
-        z-index: -1
-        top: 0
-        left: -100%
-        right: -15px
-        bottom: 0
-        background: $firsSColText
-    &-right
-      padding: 80px 40px
-      position: relative
-      z-index: 1
-      &::before
-        content: ''
-        position: absolute
-        z-index: -1
-        top: 0
-        left: -15px
-        right: 0
-        bottom: 0px
-        background: #282b2f
-.main-fotter
-  background: #212227
-  padding: 100px 0 100px 0
-  &-text
-    color: #fff
-    &-social
-      display: flex
-      flex-flow: column
-      font-family: 'FiraSansBold',sans-serif
-      .fa
-        margin-right: 10px
-    &-lastCol
-      &-sponsor
-        &-logo
-          color: #fff
-          display: inline-block
-          border: 2px solid #fff
-          padding: 25px 20px
-          margin-right: 10px
-          text-transform: uppercase
-      form
-        position: relative
-        input
-          background-color: lighten(#212227, 20%)
-          padding: 15px 20px
-          width: 100%
-          border: none
-          color: #fff
-        button
-          position: absolute
-          top: 32%
-          right: 2%
-          background: none
-          border: none
-          color: $footerTextcol
-  h3
-    color: #fff
-    font-size: em(18px)
-  p
-    color: $footerTextcol
-    font-size: em(14px)
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome"
 
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//ALWAYS END
 @import "media"
-@import "app/libs/font-awesome/scss/font-awesome"

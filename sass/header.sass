@@ -1,121 +1,231 @@
-//верстка header
 @import "bourbon"
-@import "vars"
-body
-  box-sizing: border-box
-  overflow-x: hidden
+@import "var.sass"
+*
+	box-sizing: border-box
+	font-family: 'OpenSansRegular',sans-serif
+	color: #445264
 a
-  color: inherit
-  &:hover
-    color: inherit
-    text-decoration: none
-p
-  font-family: 'FiraSansExtraLight',sans-serif
-h3
-  font-size: em(24px)
-  font-family: 'FiraSansBold',sans-serif
-  font-weight: lighter
-  text-transform: uppercase
-img
-  width: 100%
-.toggle-mnu
-  position: absolute
-  bottom: 35px
-  display: block
-  width: 28px
-  height: 28px
-  margin-top: 14px
-  span:after, span:before
-    content: ""
-    position: absolute
-    left: 0
-    top: 9px
-  span:after
-    top: 18px
-  span
-    position: relative
-    display: block
-  span, span:after, span:before
-    width: 100%
-    height: 4px
-    background-color: #000
-    transition: all 0.3s
-    backface-visibility: hidden
-    border-radius: 2px
-  &.on span
-    background-color: transparent
-  &.on span:before
-    transform: rotate(45deg) translate(-1px, 0px)
-  &.on span:after
-    transform: rotate(-45deg) translate(6px, -7px)
-header
-  background: url(../img/header/head-bg.jpg) 0 0 no-repeat
-  background-size: cover
-  padding-top: 85px
-  padding-bottom: 270px
-  position: relative
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    border: 1015px solid transparent
-    border-right: 1500px solid $blue
-    opacity: .3
-  .top-pannel
-    display: flex
-    align-items: baseline
-    justify-content: space-between
-    margin-bottom: 210px
-    &-logo
-      color: #000
-      font-size: 70px
-      font-family: 'FiraSansExtraBold',sans-serif
-    &-togle
-      cursor: pointer
-      font-size: 40px
-      position: relative
-      z-index: 3
-      &-menu
-        list-style: none
-        display: flex
-        animation-duration: 1.5s
-        &-item
-          position: relative
-          font-size: em(30px)
-          font-family: 'FiraSansExtraLight',sans-serif
-          margin-right: 20px
-          padding: 10px 20px
-          cursor: pointer
-          opacity: .99
-          &::before
-            content: ''
-            position: absolute
-            top: 0
-            left: 0
-            bottom: 0
-            right: 0
-            z-index: -1
-            background: #fff
-            opacity: 0
-            transition: all .5s ease
-            border-radius: 20px
-          &:hover
-            &::before
-              opacity: .5
-      span
-        font-size: em(4px)
-        position: absolute
-        bottom: 0
-        left: 2px
-        text-transform: uppercase
-  h2
-    font-size: em(72px)
-    font-family: 'FiraSansExtraLight',sans-serif
-    color: #000
-    margin-bottom: -10px
-  p
-    font-family: 'FiraSansExtraLight',sans-serif
-    font-size: em(30px)
-    b
-      font-family: 'FiraSansExtraBold',sans-serif
+	color: inherit
+	transition: color 0.3s ease
+	&:hover
+		color: $activeColor
+h2
+	padding: 0
+	margin: 0
+	cursor: default
+h3,p,span
+	cursor: default
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+main
+	margin: 4% 0 4% 0
+aside
+	float: left
+	margin-top: 10%
+	max-width: 200px
+.category-h2
+	margin-bottom: 2%
+.category
+	cursor: pointer
+	font-size: em(15px)
+	&-item
+		transition: color 0.3s ease
+		margin-bottom: 7%
+		&:hover
+			color: $activeColor
+	&-subcategory
+		margin-left: 15px
+		display: none
+		&-item
+			margin-top: 5px
+			margin-bottom: 5px
+.product
+	.marg
+		margin-right: 60px
+		margin-left: 10px
+		position: relative
+	&-item
+		float: right
+		transition: all 1s ease
+		padding: 15px 10px
+		text-align: center
+		&:hover
+			box-shadow: inset 0px 0px 0px 1px lighten($disButton, 20%)
+		&-discription
+			position: relative
+			&-h3
+				font-weight: lighter
+				font-size: em(18px)
+				margin: 0 0 1% 10%
+				text-align: left
+				min-height: 20%
+			&-p
+				text-align: left
+				margin: 0 0 0 15px
+				padding: 0
+				color: $discTxt
+			&-price
+				display: block
+				&-item
+					position: relative
+					margin-bottom: 10px
+					list-style: none
+					cursor: pointer
+					.fa
+						margin-left: 5px
+			.price
+				font-weight: bolder
+				font-size: em(18px)
+				cursor: pointer
+			.weight
+				margin-left: 25%
+				cursor: pointer
+			.sub-price
+				margin-top: 10px
+				position: absolute
+				display: none
+				left: -10px
+				right: -10px
+				background: lighten($blueCol, 30%)
+				z-index: 1
+				list-style: none
+				border-radius: 3px
+				box-shadow: 0px 3px 6px -2px rgba(0,0,0,0.75)
+				&::before
+					content: ''
+					position: absolute
+					top: -19%
+					left: 31%
+					border: 15px solid transparent
+					border-bottom: 10px solid lighten($blueCol, 30%)
+					z-index: -1
+				.sub-item
+					padding: 5px 10px
+					transition: all 0.3s ease
+					.fa
+						display: none
+					&:first-child
+						display: none
+					&:hover
+						background: #4b98e8
+			.button-discr
+				position: relative
+				background: #fff
+				border: 1px solid $disButton
+				margin-top: 10px
+				padding: 10px 13px
+				color: $discTxt
+				transition: all 0.5s ease
+				&:hover
+					transform: scale(1.05)
+					box-shadow: 2px 2px 25px -1px rgba(0,0,0,0.5)
+					z-index: 2
+			.buy
+				color: #fff
+				background: $disButton
+				border-left: 3px solid $blueCol
+.basket
+	display: none
+	position: fixed
+	z-index: 99
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background: #fff
+	background-size: cover
+	padding: 20px
+	&-item
+		.price-num
+			position: absolute
+			right: 28%
+			top: 28%
+	&-total
+		position: absolute
+		right: 20px
+		bottom: 15%
+	.fa
+		position: absolute
+		top: 5%
+		right: 5%
+		font-size: em(30px)
+		transition: all 0.5s ease
+		&:hover
+			transform: scale(1.1)
+			filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5))
+	.iter-price
+		position: absolute
+		right: 4%
+		bottom: 55%
+		&-num
+			font-size: em(25px)
+		&-count
+			margin-right: 30px
+		button
+			font-size: em(18px)
+			&:first-child
+				margin-left: 100px
+	&-buttons
+		float: right
+		margin-top: 30px
+		color: #fff
+		.popup-button
+			outline: none
+			border: none
+			padding: 10px 20px
+			background: #a2a8b1
+			&:last-child
+				background-color: $activeColor
+	.product
+		&-item
+			display: flex
+			border-top: 2px solid #445264
+			border-bottom: 2px solid #445264
+			&:hover
+				box-shadow: none
+			img
+				margin-right: 20px
+			&-discription
+				&-h3
+					margin-bottom: 15%
+				&-p
+					display: none
+				&-price
+					&-item
+						position: relative
+						margin-bottom: 10px
+						list-style: none
+				.price
+					position: absolute
+					right: 0
+					bottom: 10px
+				.weight
+					display: none
+				.button-discr
+					display: none
+				.fa-chevron-down
+					display: none
+.discription
+	position: fixed
+	display: none
+	z-index: 99
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background: #fff
+	background-size: cover
+	padding: 20px
+	&-form
+		border-top: 2px solid #445264
+		border-bottom: 2px solid #445264
+.modal-bg
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background: #000
+	z-index: 10
+	display: none
+	opacity: .5
