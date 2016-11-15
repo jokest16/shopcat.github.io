@@ -1,5 +1,25 @@
+@charset "UTF-8";
+/*подключаем шрифты */
 @font-face {
-  font-family: "OpenSansRegular";
+  font-family: "RobotoRegular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); }
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansExtraLight/FiraSansExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansExtraLight/FiraSansExtraLight.woff") format("woff"), url("../fonts/FiraSansExtraLight/FiraSansExtraLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansExtraBold/FiraSansExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansExtraBold/FiraSansExtraBold.woff") format("woff"), url("../fonts/FiraSansExtraBold/FiraSansExtraBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansBold/FiraSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansBold/FiraSansBold.woff") format("woff"), url("../fonts/FiraSansBold/FiraSansBold.ttf") format("truetype"); }

@@ -4,237 +4,250 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	aside
-		position: fixed
-		top: 0
-		left: 10%
-		font-size: em(16px)
-	.product
-		&-discription
-			.sub-price
-				margin-top: 10px
-				position: absolute
-				display: none
-				left: -22px
-				right: 25px
-				background: lighten($blueCol, 30%)
-				z-index: 1
-				list-style: none
-				border-radius: 3px
-				box-shadow: 0px 3px 6px -2px rgba(0,0,0,0.75)
-	.basket
-		&-total
-			bottom: 20%
-		.product
-			&-item
-				display: flex
-				&:hover
-					box-shadow: none
-				img
-					margin-right: 0px
-					max-width: 190px
-					max-height: 190px
-				&-discription
-					&-h3
-						font-size: em(16px)
-						margin-bottom: 5%
-						word-wrap: normal
-					.price
-						bottom: 0px
-						right: -15px
+  header
+    background: url(../img/header/head-bg.jpg) 50% 70% no-repeat
+    padding-bottom: 110px
+    &::before
+      border: 915px solid transparent
+      border-right: 800px solid $blue
+    .top-pannel
+      margin: 0 100px 0 100px
+      &-togle
+        &-menu
+          &-item
+            font-size: em(20px)
+  .about
+    position: relative
+    z-index: 1
+    background: #fff url(../img/about/left.jpg) no-repeat -100% 0%
+    background-size: 950px
+    .right
+      padding: 100px 40px
+  .gallery
+    &-bottom
+      &-text
+        padding: 5% 0px
+        p
+          font-size: em(25px)
+  .music
+    &-firstSect
+      padding: 0px 0px 150px 0px
+      &::before
+        right: 75.6%
+    &-secondSect
+      &-right
+        &::before
+          bottom: -45px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	aside
-		font-size: em(16px)
-		left: 5%
-	.basket
-		.iter-price
-			&-count
-				margin-right: 0px
-		.product
-			&-item
-				&-discription
-					&-h3
-						font-size: em(15px)
-						margin-bottom: 6%
-					.price
-						font-size: em(16px)
-						bottom: 0px
-						right: -15px
+  header
+    background: url(../img/header/head-bg.jpg) 80% 70% no-repeat
+    padding-bottom: 110px
+    &::before
+      border: 915px solid transparent
+      border-right: 800px solid $blue
+    .top-pannel
+      margin: 0 100px 0 100px
+      &-togle
+        &-menu
+          position: absolute
+          left: 29%
+          &-item
+            font-size: em(17px)
+            margin-right: 5px
+            padding: 10px
+    h2
+      font-size: em(62px)
+      margin-left: 10%
+    p
+      font-family: 'FiraSansExtraLight',sans-serif
+      font-size: em(25px)
+      margin-left: 10%
+  .gallery
+    &-bottom
+      .gallery-contanier-item
+        max-width: 100%
+        margin-left: 0
+  .music
+    &-secondSect
+      &-left
+        &::before
+          left: -50%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	aside
-		left: 5%
-		font-size: em(13px)
-	.basket
-		.product
-			&-item
-				&-discription
-					&-h3
-						font-size: em(12px)
-						font-weight: bold
-						margin-bottom: 12%
-					.price
-						font-size: em(14px)
-						bottom: 5px
-	@media only screen and (max-width : 639px)
-		.basket
-			&-buttons
-				.popup-button
-					padding: 10px 5px
-			.product
-				&-item
-					&-discription
-						&-h3
-							margin-bottom: 5%
-						.price
-							bottom: -5px
-							right: -15px
-	@media only screen and (max-width : 582px)
-		.basket
-			&-h2
-				border-bottom: 2px solid #445264
-			&-item
-				margin-right: 10%
-				.price-num
-					position: absolute
-					left: 20%
-					top: 28%
-			&-total
-				bottom: 25%
-			.iter-price
-				position: absolute
-				right: 20%
-				bottom: 55%
-				&-count
-					margin-right: 15px
-			&-buttons
-				border-top: 2px solid #445264
-				.popup-button
-					padding: 5px 0
-					width: 100%
-					margin-bottom: 5px
-					&:first-child
-						margin-top: 25px
-			.product
-				&-item
-					display: flex
-					border: none
-					flex-flow: column-reverse
-					img
-						opacity: 0
-						max-height: 120px
-					&-discription
-						&-h3
-							margin-bottom: 15%
-						.price
-							position: absolute
-							right: 5%
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+  header
+    .top-pannel
+      margin: 0 130px 0 100px
+      &-logo
+        position: relative
+        left: -20%
+      &-togle
+        position: relative
+        &-menu
+          opacity: 1
+          position: absolute
+          left: 15%
+          &-item
+            font-size: em(13px)
+            margin-right: 0px
+            padding: 10px
+            word-wrap: normal
+        .toggle-mnu
+          position: relative
+          right: -100px
+        .toggle-h
+          position: absolute
+          left: 100px
+  .about
+    background: #fff
+  .music
+    &-firstSect
+      background: url(../img/music/bg.jpg) no-repeat 0% 0
+      background-size: cover
+      &-text
+        font-size: em(20px)
+  /*Disable Animation on Mobile Devices*/
+  .animated
+    /*CSS transitions*/
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    /*CSS transforms*/
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	aside
-		position: relative
-		left: 50%
-		transform: translateX(-50%)
-	.product
-		position: relative
-		left: 50%
-		transform: translateX(-50%)
-	.basket
-		&-item
-			.price-num
-				left: 5%
-		.iter-price
-			position: absolute
-			left: 5%
-			bottom: 55%
-			display: flex
-			justify-content: space-between
-			&-count
-				margin-right: 30px
-				font-size: em(15px)
-			&-num
-				font-size: 15px
-			button
-				font-size: 10px
-		&-total
-			bottom: 22%
-		&-buttons
-			border-top: 2px solid #445264
-			.popup-button
-				padding: 5px 0
-				width: 100%
-				margin-bottom: 5px
-				&:first-child
-					margin-top: 25px
-		.product
-			&-item
-				display: flex
-				border: none
-				flex-flow: column-reverse
-				&-discription
-					&-h3
-						margin-bottom: 15%
-					.price
-						position: absolute
-						right: -20%
-
+  header
+    padding-top: 30px
+    .top-pannel
+      margin: 0px 40px 0 40px
+      &-logo
+        margin-top: 0px
+        font-size: 45px
+        position: relative
+        left: 0%
+      &-togle
+        font-size: 45px
+        &-menu
+          position: absolute
+          left: 50%
+          display: flex
+          flex-flow: column
+          z-index: 100
+          font-weight: bold
+          font-size: em(19px)
+        .toggle-mnu
+          position: relative
+          right: 0px
+        .toggle-h
+          position: absolute
+          left: 0px
+    h2
+      font-size: em(30px)
+      margin-top: 70px
+    p
+      font-size: em(20px)
+      font-weight: bolder
+  .about
+    h3
+      font-size: em(20px)
+    p
+      font-size: em(20px)!important
+  .gallery
+    &-bottom
+      font-size: em(15px)
+  .music
+  .music
+    &-firstSect
+      background: url(../img/music/bg.jpg) no-repeat 10% 0
+      background-size: cover
+      padding: 0
+      &-text
+        margin: 0 auto
+        font-size: em(16px)
+        &-button
+          font-size: em(10px)!important
+          padding: 10px 15px
+          .fa
+            margin-left: 5px
+    &-secondSect
+      color: #fff
+      background: #282b2f 100% 0
+      font-size: em(13px)
+  .music-secondSect-right
+    &::before
+      left: -15px
+      right: -15px
+  .main-fotter
+    .main-fotter-text-lastCol-sponsor-logo
+      margin-right: 9px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	aside
-		position: relative
-		left: 50%
-		transform: translateX(-50%)
-	.product
-		position: relative
-		left: 50%
-		transform: translateX(-50%)
-
-
+  header
+    padding-top: 30px
+    .top-pannel
+      margin: 0px 40px 0 40px
+      &-logo
+        margin-top: 00px
+        font-size: 40px
+      &-togle
+        font-size: 40px
+        &-menu
+          position: absolute
+          left: 40%
+    h2
+      font-size: em(20px)
+      margin-top: 100px
+    p
+      font-size: em(15px)
+      font-weight: bolder
+  .music
+    &-firstSect
+      background: url(../img/music/bg.jpg) no-repeat 30% 0
+      background-size: cover
+      padding: 0
+      &-text
+        margin: 0 auto
+        font-size: em(16px)
+        &-button
+          font-size: em(10px)!important
+          padding: 10px 20px
+          .fa
+            margin-left: 3px
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+  /**/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-	/**/
+  /**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+    /**/
+
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+  /**/
